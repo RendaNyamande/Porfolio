@@ -1,9 +1,9 @@
-import React from 'react'
-import { AiOutlineMail} from 'react-icons/ai'
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
-import {BsFillPersonLinesFill} from 'react-icons/bs';
-import {Element} from 'react-scroll';
-import Link from 'next/image';
+import React from 'react';
+// import { AiOutlineMail} from 'react-icons/ai';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+// import {BsFillPersonLinesFill} from 'react-icons/bs';
+// import {Element} from 'react-scroll';
+// import Link from 'next/image';
 
 const Main = () => {
   return (
@@ -24,19 +24,25 @@ const Main = () => {
                     I'm looking to bring to the table creative insights and solutions for real-world problems.
                     I'm always ready to take on new challenges that may quench my thirst for knowledge and create more zeal for creative solutions.
                 </p>
-                <div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
-                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                        <FaLinkedinIn/>
-                    </div>
-                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                        <FaGithub/>
-                    </div>
-                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                {/* Use this other div for 4 links */}
+                {/* <div className='flex items-center justify-between max-w-[330px] m-auto py-4'> */}
+                <div className='flex items-center justify-center max-w-[330px] m-auto py-4'>
+                    <a href='https://www.linkedin.com/in/renda-nyamande-983245199' target='_blank' rel='noreferrer'>
+                        <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                            <FaLinkedinIn/>
+                        </div>
+                    </a>
+                    <a href='https://github.com/RendaNyamande' target='_blank' rel='noreferrer'>
+                        <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                            <FaGithub/>
+                        </div>
+                    </a>
+                    {/* <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                         <AiOutlineMail/>
                     </div>
                     <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                         <BsFillPersonLinesFill/>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

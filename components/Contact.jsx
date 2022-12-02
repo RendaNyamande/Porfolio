@@ -1,12 +1,60 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { AiOutlineMail} from 'react-icons/ai';
+// import { AiOutlineMail} from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import {BsFillPersonLinesFill} from 'react-icons/bs';
+// import {BsFillPersonLinesFill} from 'react-icons/bs';
 import {HiOutlineChevronDoubleUp} from 'react-icons/hi';
+import { useState } from 'react';
 
-function Contact() {
+const Contact = () => {
+    const [name, setName] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [email, setEmail] = useState('');
+    const [subject, setSubject] = useState('');
+    const [message, setMessage] = useState('');
+    const [submitted, setSubmitted] = useState(false);
+
+    const handleSubmit = (e) => { 
+        e.preventDefault()
+
+        console.log('Sending')
+        let data = {
+            name,
+            phoneNumber,
+            email,
+            subject,
+            message
+        }
+
+        fetch('/api/Contacting', {
+            method: 'POST',
+            headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }).then((/*res**/) => {
+            console.log('Response received')
+            // if (res.status === '250') {
+            console.log('Response succeeded!')
+            setSubmitted(true)
+            setName('')
+            setPhoneNumber('')
+            setEmail('')
+            setSubject('')
+            setBody('')
+            // }
+        })
+    }
+    useEffect(()=>{
+        //
+        if(submitted == true){
+            return <Success />;
+        }
+    }, [submitted]);
+
+
   return (
     <div id='contact' className='w-full lg:h-screen'>
         <div className='max-w-[1240px] m-auto px-2 py-16 w-full'>
@@ -19,26 +67,38 @@ function Contact() {
                             <Image className='rounded-xl hover:scale-105 ease-in duration-300' src='/../public/assets/contact.jpg' width={720} height={720}/>
                         </div>
                         <div>
-                            <h2 className='py-2'>Name here</h2>
+                            <h2 className='py-2'>Renda Nyamande</h2>
                             <p>Graduate Java Developer</p>
                             <p className='py-4'>I'm available for freelance or full-time positions. Contact me and let's talk</p>
                         </div>
 
                     <div>
-                        <p className='uppercase pt-8'>Connect With Me</p>
-                        <div className='flex items-center justify-between py-4'>
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                        <br /><p className='uppercase text-center' >Connect With Me</p>
+                        {/* Use this div for 4 links */}
+                        {/* <div className='flex items-center justify-between py-4'> */}
+                        <div className='flex items-center justify-center py-4'>
+                            <a href='https://www.linkedin.com/in/renda-nyamande-983245199' target='_blank' rel='noreferrer'>
+                                <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                                    <FaLinkedinIn/>
+                                </div>
+                            </a>
+                            <a href='https://github.com/RendaNyamande' target='_blank' rel='noreferrer'>
+                                <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                                    <FaGithub/>
+                                </div>
+                            </a>
+                            {/* <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                                 <FaLinkedinIn/>
                             </div>
                             <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                                 <FaGithub/>
-                            </div>
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                            </div> */}
+                            {/* <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                                 <AiOutlineMail/>
                             </div>
                             <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                                 <BsFillPersonLinesFill/>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     </div>
@@ -53,35 +113,35 @@ function Contact() {
                                     <label className='uppercase text-sm py-2'>
                                         Name
                                     </label>
-                                    <input className='border-2 rounded-lg p-3 flex border-gray-300' type='text' />
+                                    <input name='name' onChange={(e)=>{setName(e.target.value)}} className='border-2 rounded-lg p-3 flex border-gray-300' type='text' />
                                 </div>
                                 <div className='flex flex-col'>
                                     <label className='uppercase text-sm py-2'>
                                         Phone Number
                                     </label>
-                                    <input className='border-2 rounded-lg p-3 flex border-gray-300' type='text' />
+                                    <input name='phoneNumber' onChange={(e)=>{setPhoneNumber(e.target.value)}} className='border-2 rounded-lg p-3 flex border-gray-300' type='text' />
                                 </div>
                             </div>
                             <div className='flex flex-col py-2'>
                                 <label className='uppercase text-sm py-2'>
                                     Email
                                 </label>
-                                <input className='border-2 rounded-lg p-3 flex border-gray-300' type='email' />
+                                <input name='email' onChange={(e)=>{setEmail(e.target.value)}} className='border-2 rounded-lg p-3 flex border-gray-300' type='email' />
                             </div>
                             <div className='flex flex-col py-2'>
                                 <label className='uppercase text-sm py-2'>
                                     Subject
                                 </label>
-                                <input className='border-2 rounded-lg p-3 flex border-gray-300' type='text' />
+                                <input name='subject' onChange={(e)=>{setSubject(e.target.value)}} className='border-2 rounded-lg p-3 flex border-gray-300' type='text' />
                             </div>
                             <div className='flex flex-col py-2'>
                                 <label className='uppercase text-sm py-2'>
                                     Message
                                 </label>
-                                <textarea className='border-2 rounded-lg p-3 border-gray-300' rows='10'>
+                                <textarea name='message' onChange={(e)=>{setMessage(e.target.value)}} className='border-2 rounded-lg p-3 border-gray-300' rows='10'>
                                 </textarea>
                             </div>
-                            <button className='w-full p-4 text-gray-100 mt-4'>Send Message</button>
+                            <button onClick={(e)=>{handleSubmit(e)}} className='w-full p-4 text-gray-100 mt-4'>Send Message</button>
                         </form>
                     </div>
                 </div>

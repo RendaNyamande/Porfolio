@@ -4,10 +4,26 @@ import React, {useState, useEffect} from "react";
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail} from "react-icons/ai";
 import {FaGithub, FaLinkedinIn} from "react-icons/fa";
 import {BsFillPersonLinesFill} from 'react-icons/bs';
+import {useRouter} from 'next/router';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
+  const [navBg, setNavBg] = useState('#fbf1c7');
+  const [linkColor, setLinkColor] = useState('#076678');
+  const router = useRouter();
+  useEffect(()=>{
+    if(
+      router.asPath === '/property'
+      // || router.asPath === 'Other project names'
+    ){
+      setNavBg('transparent')
+      setLinkColor('#fbf1c7')
+    }else{
+      setNavBg('#fbf1c7')
+      setLinkColor('#076678')
+    }
+  }, [router]);
   const handleNav = () =>{
     setNav(!nav);
   }
@@ -22,16 +38,19 @@ const Navbar = () => {
     window.addEventListener('scroll', handleShadow);
   }, []);
   return (
-    <div className={shadow? "fixed w-full h-20 shadow-xl z-[100]" : "fixed w-full h-20 z-[100]"}>
-      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
+    <div 
+    style={{backgroundColor: `${navBg}`}}
+    className={shadow? "fixed w-full h-20 shadow-xl z-[100]" : "fixed w-full h-20 z-[100]"}>
+      <div className=" flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <Image
-          src="/../public/assets/navLogo.png"
+          src="/../public/assets/navLogo1.png"
+          // src="https://img.icons8.com/wired/64/000000/r.png"
           alt="/"
-          width="125"
-          height="50"
+          width="75"
+          height="25"
         />
         <div>
-          <ul className="hidden md:flex">
+          <ul style={{color: `${linkColor}`}} className="hidden md:flex">
               <li className="ml-10 text-sm uppercase hover:border-b">
                 <Link href='/'>
                     Home
@@ -74,10 +93,11 @@ const Navbar = () => {
             <div className="flex w-full items-center justify-between">
               <Link href='/'>
                   <Image
-                    src="/../public/assets/navLogo.png"
+                    // src="/../public/assets/navLogo.png"
+                    src="/../public/assets/navLogo1.png"
                     alt="/"
-                    width="87"
-                    height="35"
+                    width="75"
+                    height="25"
                   />
               </Link>
               <div onClick={handleNav} className="rounded-full shadow-lg shadow-gray-400 p3 cursor-pointer">

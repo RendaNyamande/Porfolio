@@ -6,7 +6,7 @@ import {RiRadioButtonFill} from 'react-icons/ri';
 const Property = () => {
   return (
     <div className='w-full'>
-        <div className='w-screen h-[30vh] lg:h-[48vh] relative'>
+        <div className='w-screen h-[50vh] relative'>
             <div className='absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-[#282828]/80 z-10' />
             <Image className='absolute z-1' layout='fill' objectFit='cover' src="/../public/access/projects/netflixClone.png" alt='/' />
             <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-[#fbf1c7] z-10 p-2'>
