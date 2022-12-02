@@ -7,7 +7,7 @@ You will need [Node.js](https://nodejs.org) version 8.0 or greater installed on 
 Get the code by either cloning this repository using git
 
 ```
-git clone [https://github.com/sanity-io/example-frontend-next-js.git](https://github.com/RendaNyamande/Porfolio.git)
+git clone https://github.com/RendaNyamande/Porfolio.git
 ```
 
 ... or [downloading source code](https://github.com/sanity-io/example-frontend-next-js/archive/master.zip) code as a zip archive.
