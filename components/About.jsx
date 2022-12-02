@@ -14,7 +14,9 @@ const About = () => {
                 <p className='py-2 text-gray-600'>
                     I have spent all my life honing my problem solving skills.
                      From solving math problems all the way to being addicted to
-                      chess I've learnt how to approach problems and tackle them.
+                      chess I've learnt how to approach problems and tackle them. I tend to 
+                      enjoy creating in general, whether it's drawing, playing the piano or writing
+                      software, creativity is something I value as much as hard work.
                 </p><br />
                 <p className='py-2 text-gray-600'>
                     I like to describe myself as a problem solver who learnt to code.

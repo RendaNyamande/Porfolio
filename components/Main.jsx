@@ -14,10 +14,10 @@ const Main = () => {
             <div>
                 <p className='uppercase text-sm tracking-widest text-gray-600'>LET'S BUILD SOMETHING!</p>
                 <h1 className='py-4 text-gray-700'>
-                    Hi, I'm <span className='text-[#076678]'>Renda</span>
+                    Hi <span className='text-[#076678]'>Sovtech</span>, I'm <span className='text-[#458588]'>Renda</span> :)
                 </h1>
                 <h1 className='py-2 text-gray-700'>
-                A Graduate Java Developer
+                A Graduate Software Developer
                 </h1>
                 <p className='py-4 text-gray-600 max-w-[70%] m-auto'>
                     I'm a passionate, enthusiastic and hardworking problem solver who learnt how to write code years ago.
