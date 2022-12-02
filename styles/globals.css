@@ -5,6 +5,11 @@
 html{
   scroll-behavior: smooth;
 }
+/* p {
+ text-align: center;
+line-height: 100px;
+
+} */
 @layer base{
   body{
     @apply bg-[#fbf1c7] text-[#282828] tracking-wide
