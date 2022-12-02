@@ -42,13 +42,13 @@ const Navbar = () => {
     style={{backgroundColor: `${navBg}`}}
     className={shadow? "fixed w-full h-20 shadow-xl z-[100]" : "fixed w-full h-20 z-[100]"}>
       <div className=" flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <Image
+        {/* <Image
           src="/../public/assets/navLogo1.png"
           // src="https://img.icons8.com/wired/64/000000/r.png"
           alt="/"
-          width="75"
-          height="25"
-        />
+          width={75}
+          height={25}
+        /> */}
         <div>
           <ul style={{color: `${linkColor}`}} className="hidden md:flex">
               <li className="ml-10 text-sm uppercase hover:border-b">
@@ -92,13 +92,13 @@ const Navbar = () => {
           <div>
             <div className="flex w-full items-center justify-between">
               <Link href='/'>
-                  <Image
+                  {/* <Image
                     // src="/../public/assets/navLogo.png"
                     src="/../public/assets/navLogo1.png"
                     alt="/"
-                    width="75"
-                    height="25"
-                  />
+                    width={75}
+                    height={25}
+                  /> */}
               </Link>
               <div onClick={handleNav} className="rounded-full shadow-lg shadow-gray-400 p3 cursor-pointer">
                 <AiOutlineClose />
