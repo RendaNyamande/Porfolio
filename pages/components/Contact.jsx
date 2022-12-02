@@ -88,13 +88,10 @@ function Contact() {
             </div>
             <div>
                 <Link className='flex justify-center py-12' href='/'>
-                    <a>
                         <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                             {/* <div> */}
                                 <HiOutlineChevronDoubleUp className='text-[#458588]' size={30}/>
                             </div>
-
-                    </a>
                 </Link>
             </div>
         </div>

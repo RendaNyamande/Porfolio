@@ -73,14 +73,12 @@ const Navbar = () => {
           <div>
             <div className="flex w-full items-center justify-between">
               <Link href='/'>
-                <a>
                   <Image
                     src="/../public/assets/navLogo.png"
                     alt="/"
                     width="87"
                     height="35"
                   />
-                </a>
               </Link>
               <div onClick={handleNav} className="rounded-full shadow-lg shadow-gray-400 p3 cursor-pointer">
                 <AiOutlineClose />
