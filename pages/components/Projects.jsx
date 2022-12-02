@@ -14,10 +14,10 @@ const Projects = () => {
             </p>
             <h2 className='py-4'>What I've built</h2>
             <div className='grid md:grid-cols-2 gap-8'>
-                <ProjectItem title='Netflix Clone' backgroundImg='/../public/assets/projects/netflixClone.png' projectUrl='/netflixClone' />
-                <ProjectItem title='Netflix Clone' backgroundImg='/../public/assets/projects/netflixClone.png' projectUrl='/netflixClone' />
-                <ProjectItem title='Netflix Clone' backgroundImg='/../public/assets/projects/netflixClone.png' projectUrl='/netflixClone' />
-                <ProjectItem title='Netflix Clone' backgroundImg='/../public/assets/projects/netflixClone.png' projectUrl='/netflixClone' />
+                {/* <ProjectItem title='Netflix Clone' backgroundImg='/../public/assets/projects/netflixClone.png' projectUrl='/' />
+                <ProjectItem title='Netflix Clone' backgroundImg='/../public/assets/projects/netflixClone.png' projectUrl='/' />
+                <ProjectItem title='Netflix Clone' backgroundImg='/../public/assets/projects/netflixClone.png' projectUrl='/' />
+                <ProjectItem title='Netflix Clone' backgroundImg='/../public/assets/projects/netflixClone.png' projectUrl='/' /> */}
                 {/* <ProjectItem title='Netflix Clone' backgroundImg='/../public/assets/projects/netflixClone.png' projectUrl='/netflixClone' />
                 <ProjectItem title='Netflix Clone' backgroundImg='/../public/assets/projects/netflixClone.png' projectUrl='/netflixClone' />
                 <ProjectItem title='Netflix Clone' backgroundImg='/../public/assets/projects/netflixClone.png' projectUrl='/netflixClone' /> */}

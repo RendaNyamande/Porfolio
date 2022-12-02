@@ -32,25 +32,31 @@ const Navbar = () => {
         />
         <div>
           <ul className="hidden md:flex">
-            <Link href="/">
-              <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
-            </Link>
-            <Link href="/#about">
-              <li className="ml-10 text-sm uppercase hover:border-b">About</li>
-            </Link>
-            <Link href="/#skills">
-              <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
-            </Link>
-            <Link href="/#projects">
               <li className="ml-10 text-sm uppercase hover:border-b">
-                Projects
+                <Link href='/'>
+                    Home
+                </Link>
               </li>
-            </Link>
-            <Link href="/#contacts">
               <li className="ml-10 text-sm uppercase hover:border-b">
-                Contact
+                <Link href='/#about'>
+                    About 
+                </Link>
               </li>
-            </Link>
+              <li className="ml-10 text-sm uppercase hover:border-b">
+                <Link href='/#skills'>
+                    Skills
+                </Link>
+              </li>
+              <li className="ml-10 text-sm uppercase hover:border-b">
+                <Link href='/#projects'>
+                    Projects
+                </Link>
+              </li>
+              <li className="ml-10 text-sm uppercase hover:border-b">
+                <Link href='/#contact'>
+                    Contact
+                </Link>
+              </li>
           </ul>
           <div onClick={handleNav} className="md:hidden">
             <AiOutlineMenu size={25} />
@@ -66,12 +72,16 @@ const Navbar = () => {
         :'fixed left-[-100%] top-0 p-10 ease-in duration-500'}>
           <div>
             <div className="flex w-full items-center justify-between">
-              <Image
-                src="/../public/assets/navLogo.png"
-                alt="/"
-                width="87"
-                height="35"
-              />
+              <Link href='/'>
+                <a>
+                  <Image
+                    src="/../public/assets/navLogo.png"
+                    alt="/"
+                    width="87"
+                    height="35"
+                  />
+                </a>
+              </Link>
               <div onClick={handleNav} className="rounded-full shadow-lg shadow-gray-400 p3 cursor-pointer">
                 <AiOutlineClose />
               </div>
@@ -82,21 +92,31 @@ const Navbar = () => {
           </div>
           <div>
             <ul>
-              <Link href='/'>
-                <li className="py-4 text-sm">Home</li>
-              </Link>
-              <Link href='/'>
-                <li className="py-4 text-sm">About</li>
-              </Link>
-              <Link href='/'>
-                <li className="py-4 text-sm">Skills</li>
-              </Link>
-              <Link href='/'>
-                <li className="py-4 text-sm">Projects</li>
-              </Link>
-              <Link href='/'>
-                <li className="py-4 text-sm">Contact</li>
-              </Link>
+                <li onClick={()=> setNav(false)} className="py-4 text-sm">
+                  <Link href='/'>
+                    Home
+                  </Link>
+                </li>
+                <li onClick={()=> setNav(false)} className="py-4 text-sm">
+                  <Link href='/#about'>
+                    about
+                  </Link>
+                </li>
+                <li onClick={()=> setNav(false)} className="py-4 text-sm">
+                  <Link href='/#skills'>
+                    skills
+                  </Link>
+                </li>
+                <li onClick={()=> setNav(false)} className="py-4 text-sm">
+                  <Link href='/#projects'>
+                    projects
+                  </Link>
+                </li>
+                <li onClick={()=> setNav(false)} className="py-4 text-sm">
+                  <Link href='/#contact'>
+                    contact
+                  </Link>
+                </li>
             </ul>
             <div className="pt-40">
               <p className="uppercase tracking-widest text-[#458588]">Let's connect</p>
