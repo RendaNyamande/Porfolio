@@ -14,9 +14,9 @@ const Projects = () => {
             </p>
             <h2 className='py-4'>What I've built</h2>
             <div className='grid md:grid-cols-2 gap-8'>
-                <ProjectItem title='Netflix Clone' backgroundImg='/../public/assets/projects/netflixClone.png' tech='HTML, CSS' projectUrl='https://github.com/RendaNyamande/Netflix-clone.git' />
-                <ProjectItem title='Chat Application' backgroundImg='/../public/assets/projects/chatApp1.png' tech='Java' projectUrl='https://github.com/RendaNyamande/Client-Server-Chat-Application.git' />
-                <ProjectItem title='MovieAPI' backgroundImg='/../public/assets/projects/MovieLand.png' tech='React' projectUrl='https://github.com/RendaNyamande/MovieLand.git' />
+                <ProjectItem title='Netflix Clone' backgroundImg='/assets/projects/netflixClone.png' tech='HTML, CSS' projectUrl='https://github.com/RendaNyamande/Netflix-clone.git' />
+                <ProjectItem title='Chat Application' backgroundImg='/assets/projects/chatApp1.png' tech='Java' projectUrl='https://github.com/RendaNyamande/Client-Server-Chat-Application.git' />
+                <ProjectItem title='MovieAPI' backgroundImg='/assets/projects/MovieLand.png' tech='React' projectUrl='https://github.com/RendaNyamande/MovieLand.git' />
                 {/* <ProjectItem title='Netflix Clone' backgroundImg='/../public/assets/projects/netflixClone.png' projectUrl='/' /> */}
                 {/* <ProjectItem title='Netflix Clone' backgroundImg='/../public/assets/projects/netflixClone.png' projectUrl='/netflixClone' />
                 <ProjectItem title='Netflix Clone' backgroundImg='/../public/assets/projects/netflixClone.png' projectUrl='/netflixClone' />

@@ -39,7 +39,7 @@ const About = () => {
             {/* <img className='rounded-xl' src="" width={125} height={50} alt=''></img> */}
             {/* <Image className='rounded-xl' src={aboutImage} width={125} height={50} alt='/' /> */}
             <div className='w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'>
-                <Image className='rounded-xl' src='/../public/assets/macbook.jpg' width={400} height={400} max-width='100%' alt='A Macbook' />
+                <Image className='rounded-xl' src='/assets/macbook.jpg' width={400} height={400} max-width='100%' alt='A Macbook' />
                 {/* <img src='/../public/assets/macbook.jpg' /> */}
             </div>
         </div>
