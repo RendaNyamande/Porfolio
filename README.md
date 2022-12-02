@@ -1,3 +1,5 @@
+This is a portfolio website in next js and tailwind, deployed on vercel.
+
 ## Prerequisites
 
 You will need [Node.js](https://nodejs.org) version 8.0 or greater installed on your system.
