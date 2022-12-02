@@ -1,4 +1,4 @@
-This is a portfolio website in next js and tailwind, deployed on vercel.
+This is a portfolio website built in next js and tailwind, deployed on vercel.
 
 ## Prerequisites
 
