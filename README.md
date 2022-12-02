@@ -28,4 +28,4 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-The site is running at [porfolio-qw69-h45mqdcsq-rendanyamande.vercel.app](porfolio-qw69-h45mqdcsq-rendanyamande.vercel.app)
+The site is running at [porfolio-qw69-h45mqdcsq-rendanyamande.vercel.app](https://porfolio-qw69.vercel.app/)
