@@ -105,7 +105,7 @@ const Navbar = () => {
               </div>
             </div>
           <div className="border-b border-gray-300 my-4">
-            <p className="w-{85%} md:w-[90%] py-4">He thabelo, this is you from the future. This is not a prank. Renda is not the one typing this!</p>
+            <p className="w-{85%} md:w-[90%] py-4"> Let's build something!</p>
           </div>
           </div>
           <div>
@@ -145,12 +145,12 @@ const Navbar = () => {
                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                   <FaGithub/>
                 </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                {/* <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                   <AiOutlineMail/>
                 </div>
                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                   <BsFillPersonLinesFill/>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
