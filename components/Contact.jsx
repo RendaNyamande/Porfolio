@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 // import { AiOutlineMail} from 'react-icons/ai';
@@ -16,19 +16,19 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const nameRef = useRef();
-  const phoneNumberRef = useRef();
-  const emailRef = useRef();
-  const subjectRef = useRef();
-  const messageRef = useRef();
+//   const nameRef = useRef();
+//   const phoneNumberRef = useRef();
+//   const emailRef = useRef();
+//   const subjectRef = useRef();
+//   const messageRef = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const enteredName = nameRef.current.value;
-    const enteredPhoneNumber = phoneNumberRef.current.value;
-    const enteredEmail = emailRef.current.value;
-    const enteredSubject = subjectRef.current.value;
-    const enteredMessage = messageRef.current.value;
+    // const enteredName = nameRef.current.value;
+    // const enteredPhoneNumber = phoneNumberRef.current.value;
+    // const enteredEmail = emailRef.current.value;
+    // const enteredSubject = subjectRef.current.value;
+    // const enteredMessage = messageRef.current.value;
 
     console.log("Sending");
     let data = {
@@ -151,7 +151,7 @@ const Contact = () => {
                       <label className="uppercase text-sm py-2">Name</label>
                       <input
                         name="name"
-                        ref={nameRef}
+                        // ref={nameRef}
                         onChange={(e) => {
                           setName(e.target.value);
                         }}
@@ -165,7 +165,7 @@ const Contact = () => {
                       </label>
                       <input
                         name="phoneNumber"
-                        ref={phoneNumberRef}
+                        // ref={phoneNumberRef}
                         onChange={(e) => {
                           setPhoneNumber(e.target.value);
                         }}
@@ -178,7 +178,7 @@ const Contact = () => {
                     <label className="uppercase text-sm py-2">Email</label>
                     <input
                       name="email"
-                      ref={emailRef}
+                    //   ref={emailRef}
                       onChange={(e) => {
                         setEmail(e.target.value);
                       }}
@@ -190,7 +190,7 @@ const Contact = () => {
                     <label className="uppercase text-sm py-2">Subject</label>
                     <input
                       name="subject"
-                      ref={subjectRef}
+                    //   ref={subjectRef}
                       onChange={(e) => {
                         setSubject(e.target.value);
                       }}
@@ -202,7 +202,7 @@ const Contact = () => {
                     <label className="uppercase text-sm py-2">Message</label>
                     <textarea
                       name="message"
-                      ref={messageRef}
+                    //   ref={messageRef}
                       onChange={(e) => {
                         setMessage(e.target.value);
                       }}
