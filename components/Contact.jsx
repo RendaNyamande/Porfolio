@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-// import { AiOutlineMail} from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-// import {BsFillPersonLinesFill} from 'react-icons/bs';
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import { useState } from "react";
 import Success from "./Success";
@@ -16,32 +14,17 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-//   const nameRef = useRef();
-//   const phoneNumberRef = useRef();
-//   const emailRef = useRef();
-//   const subjectRef = useRef();
-//   const messageRef = useRef();
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    // const enteredName = nameRef.current.value;
-    // const enteredPhoneNumber = phoneNumberRef.current.value;
-    // const enteredEmail = emailRef.current.value;
-    // const enteredSubject = subjectRef.current.value;
-    // const enteredMessage = messageRef.current.value;
 
     console.log("Sending");
+
     let data = {
-      name, 
+      name,
       phoneNumber,
       email,
       subject,
-      message
-    //   enteredName,
-    //   enteredPhoneNumber,
-    //   enteredEmail,
-    //   enteredSubject,
-    //   enteredMessage,
+      message,
     };
     console.log(data);
 
@@ -65,12 +48,6 @@ const Contact = () => {
       }
     });
   };
-  //   useEffect(() => {
-  //     //
-  //     if (submitted == true) {
-  //       return <Success />;
-  //     }
-  //   }, [submitted]);
 
   return (
     <div id="contact" className="w-full lg:h-screen">
@@ -151,7 +128,6 @@ const Contact = () => {
                       <label className="uppercase text-sm py-2">Name</label>
                       <input
                         name="name"
-                        // ref={nameRef}
                         onChange={(e) => {
                           setName(e.target.value);
                         }}
@@ -165,7 +141,6 @@ const Contact = () => {
                       </label>
                       <input
                         name="phoneNumber"
-                        // ref={phoneNumberRef}
                         onChange={(e) => {
                           setPhoneNumber(e.target.value);
                         }}
@@ -178,7 +153,6 @@ const Contact = () => {
                     <label className="uppercase text-sm py-2">Email</label>
                     <input
                       name="email"
-                    //   ref={emailRef}
                       onChange={(e) => {
                         setEmail(e.target.value);
                       }}
@@ -190,7 +164,6 @@ const Contact = () => {
                     <label className="uppercase text-sm py-2">Subject</label>
                     <input
                       name="subject"
-                    //   ref={subjectRef}
                       onChange={(e) => {
                         setSubject(e.target.value);
                       }}
@@ -202,7 +175,6 @@ const Contact = () => {
                     <label className="uppercase text-sm py-2">Message</label>
                     <textarea
                       name="message"
-                    //   ref={messageRef}
                       onChange={(e) => {
                         setMessage(e.target.value);
                       }}
@@ -226,7 +198,6 @@ const Contact = () => {
         <div>
           <Link className="flex justify-center py-12" href="/">
             <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              {/* <div> */}
               <HiOutlineChevronDoubleUp className="text-[#458588]" size={30} />
             </div>
           </Link>
