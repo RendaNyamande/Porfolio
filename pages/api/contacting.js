@@ -1,4 +1,4 @@
-export default function (req, res) {
+export default async function (req, res) {
   require("dotenv").config();
   const PASSWORD = process.env.password;
   let nodemailer = require("nodemailer");
