@@ -1,6 +1,6 @@
-require('dotenv').config()
 
 export default function (req, res) {
+  require('dotenv').config()
   const PASSWORD = process.env.password
   let nodemailer = require('nodemailer')
   const transporter = nodemailer.createTransport({
@@ -10,10 +10,11 @@ export default function (req, res) {
     auth: {
       user: 'rendanyamandeportfolio@gmail.com',
     //   pass: process.env.password,
-      pass: PASSWORD,
+      pass: process.env.password,
     },
     secure: true,
-  })
+  });
+
    const mailData = {
     from: 'rendanyamandeportfolio@gmail.com',
     // to: 'rendanyamandeportfolio@gmail.com',
@@ -25,10 +26,10 @@ export default function (req, res) {
   }
     transporter.sendMail(mailData, function (err, info) {
     if(err)
-        console.log(err)
+        console.log(err);
     else
-        console.log(info)
+        console.log(info);
     })
-    // res.status(200)
-    res.status('250')
+    console.log(req.body)
+    res.send('success')
 }

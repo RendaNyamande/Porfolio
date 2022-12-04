@@ -32,45 +32,45 @@ const Contact = () => {
 
     console.log("Sending");
     let data = {
-        // name,
-        // phoneNumber,
-        // email,
-        // subject,
-        // message
-      enteredName,
-      enteredPhoneNumber,
-      enteredEmail,
-      enteredSubject,
-      enteredMessage
+      name, 
+      phoneNumber,
+      email,
+      subject,
+      message
+    //   enteredName,
+    //   enteredPhoneNumber,
+    //   enteredEmail,
+    //   enteredSubject,
+    //   enteredMessage,
     };
     console.log(data);
 
-    fetch("/api/Contacting", {
+    fetch("/api/contacting", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    }).then((/*res**/) => {
+    }).then((res) => {
       console.log("Response received");
-      if (res.status === "200") {
+      if (res.status === 200) {
         console.log("Response succeeded!");
         setSubmitted(true);
-        // setName("");
-        // setPhoneNumber("");
-        // setEmail("");
-        // setSubject("");
-        // setBody("");
+        setName("");
+        setPhoneNumber("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
       }
     });
   };
-  useEffect(() => {
-    //
-    if (submitted == true) {
-      return <Success />;
-    }
-  }, [submitted]);
+  //   useEffect(() => {
+  //     //
+  //     if (submitted == true) {
+  //       return <Success />;
+  //     }
+  //   }, [submitted]);
 
   return (
     <div id="contact" className="w-full lg:h-screen">
@@ -140,87 +140,88 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          {submitted ? <Success/> : 
-
-          <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
-            <div className="p-4">
-              <form>
-                <div className="grid md:grid-cols-2 gap-4 w-full py-4">
-                  <div className="flex flex-col">
-                    <label className="uppercase text-sm py-2">Name</label>
+          {submitted ? (
+            <Success />
+          ) : (
+            <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
+              <div className="p-4">
+                <form>
+                  <div className="grid md:grid-cols-2 gap-4 w-full py-4">
+                    <div className="flex flex-col">
+                      <label className="uppercase text-sm py-2">Name</label>
+                      <input
+                        name="name"
+                        ref={nameRef}
+                        onChange={(e) => {
+                          setName(e.target.value);
+                        }}
+                        className="border-2 rounded-lg p-3 flex border-gray-300"
+                        type="text"
+                      />
+                    </div>
+                    <div className="flex flex-col">
+                      <label className="uppercase text-sm py-2">
+                        Phone Number
+                      </label>
+                      <input
+                        name="phoneNumber"
+                        ref={phoneNumberRef}
+                        onChange={(e) => {
+                          setPhoneNumber(e.target.value);
+                        }}
+                        className="border-2 rounded-lg p-3 flex border-gray-300"
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-col py-2">
+                    <label className="uppercase text-sm py-2">Email</label>
                     <input
-                      name="name"
-                      ref={nameRef}
+                      name="email"
+                      ref={emailRef}
                       onChange={(e) => {
-                        setName(e.target.value);
+                        setEmail(e.target.value);
+                      }}
+                      className="border-2 rounded-lg p-3 flex border-gray-300"
+                      type="email"
+                    />
+                  </div>
+                  <div className="flex flex-col py-2">
+                    <label className="uppercase text-sm py-2">Subject</label>
+                    <input
+                      name="subject"
+                      ref={subjectRef}
+                      onChange={(e) => {
+                        setSubject(e.target.value);
                       }}
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                       type="text"
                     />
                   </div>
-                  <div className="flex flex-col">
-                    <label className="uppercase text-sm py-2">
-                      Phone Number
-                    </label>
-                    <input
-                      name="phoneNumber"
-                      ref={phoneNumberRef}
+                  <div className="flex flex-col py-2">
+                    <label className="uppercase text-sm py-2">Message</label>
+                    <textarea
+                      name="message"
+                      ref={messageRef}
                       onChange={(e) => {
-                        setPhoneNumber(e.target.value);
+                        setMessage(e.target.value);
                       }}
-                      className="border-2 rounded-lg p-3 flex border-gray-300"
-                      type="text"
-                    />
+                      className="border-2 rounded-lg p-3 border-gray-300"
+                      rows="10"
+                    ></textarea>
                   </div>
-                </div>
-                <div className="flex flex-col py-2">
-                  <label className="uppercase text-sm py-2">Email</label>
-                  <input
-                    name="email"
-                    ref={emailRef}
-                    onChange={(e) => {
-                      setEmail(e.target.value);
+                  <button
+                    onClick={(e) => {
+                      handleSubmit(e);
                     }}
-                    className="border-2 rounded-lg p-3 flex border-gray-300"
-                    type="email"
-                  />
-                </div>
-                <div className="flex flex-col py-2">
-                  <label className="uppercase text-sm py-2">Subject</label>
-                  <input
-                    name="subject"
-                    ref={subjectRef}
-                    onChange={(e) => {
-                      setSubject(e.target.value);
-                    }}
-                    className="border-2 rounded-lg p-3 flex border-gray-300"
-                    type="text"
-                  />
-                </div>
-                <div className="flex flex-col py-2">
-                  <label className="uppercase text-sm py-2">Message</label>
-                  <textarea
-                    name="message"
-                    ref={messageRef}
-                    onChange={(e) => {
-                      setMessage(e.target.value);
-                    }}
-                    className="border-2 rounded-lg p-3 border-gray-300"
-                    rows="10"
-                  ></textarea>
-                </div>
-                <button
-                  onClick={(e) => {
-                    handleSubmit(e);
-                  }}
-                  className="w-full p-4 text-gray-100 mt-4"
-                >
-                  Send Message
-                </button>
-              </form>
+                    className="w-full p-4 text-gray-100 mt-4"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </div>
             </div>
-          </div>
-          }
+          )}
         </div>
         <div>
           <Link className="flex justify-center py-12" href="/">
