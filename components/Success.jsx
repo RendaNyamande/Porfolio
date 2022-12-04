@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Success = () => {
   return (
-    <div>Success!</div>
-  )
-}
+    <div>
+      <p>Success!</p>
+    </div>
+  );
+};
 
-export default Success
+export default Success;

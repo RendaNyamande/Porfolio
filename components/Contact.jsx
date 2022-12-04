@@ -6,6 +6,7 @@ import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 // import {BsFillPersonLinesFill} from 'react-icons/bs';
 import {HiOutlineChevronDoubleUp} from 'react-icons/hi';
 import { useState } from 'react';
+import Success from './Success';
 
 const Contact = () => {
     const [name, setName] = useState('');
@@ -36,15 +37,15 @@ const Contact = () => {
             body: JSON.stringify(data)
         }).then((/*res**/) => {
             console.log('Response received')
-            // if (res.status === '250') {
-            console.log('Response succeeded!')
-            setSubmitted(true)
-            setName('')
-            setPhoneNumber('')
-            setEmail('')
-            setSubject('')
-            setBody('')
-            // }
+            if (res.status === '250') {
+                console.log('Response succeeded!')
+                setSubmitted(true)
+                setName('')
+                setPhoneNumber('')
+                setEmail('')
+                setSubject('')
+                setBody('')
+            }
         })
     }
     useEffect(()=>{
