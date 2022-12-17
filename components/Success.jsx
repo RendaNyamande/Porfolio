@@ -9,14 +9,15 @@ const Success = () => {
           You've made the right choice{" "}
           <span className="text-[#458588]">:)</span>
         </h2>
-        <div class="grid h-screen place-items-center">
-          <Image
+        <div className="grid h-screen place-items-center">
+          <p>AN IMAGE</p>
+          {/* <Image
             className="rounded-xl hover:scale-105 ease-in duration-300"
             src="/assets/success/success2.gif"
             width={560}
             height={560}
             alt="/"
-          />
+          /> */}
         </div>
       </div>
     </div>
