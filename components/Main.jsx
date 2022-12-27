@@ -10,7 +10,7 @@ const Main = () => {
             LET'S BUILD SOMETHING!
           </p>
           <h1 className="py-4 text-gray-700">
-            Hi <span className="text-[#076678]">Sovtech</span>, I'm{" "}
+            Hi<span className="text-[#076678]"></span>, I'm{" "}
             <span className="text-[#458588]">Renda</span> :)
           </h1>
           <h1 className="py-2 text-gray-700">A Graduate Software Developer</h1>

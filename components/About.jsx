@@ -32,10 +32,11 @@ const About = () => {
           <p className="py-2 text-gray-600">
             I want to work with a team that is building the best software
             solutions to solve problems worth solving. A company that keeps up
-            with the best ways to build and strives for excellence. Sovtech
+            with the best ways to build and strives for excellence. 
+            {/* Sovtech
             seems like that place for me! The fact that this is the assignment
             we were given gets me excited to join the team. I had a lot of fun
-            building this so know I'll be a good fit there :)
+            building this so know I'll be a good fit there :) */}
           </p>
           <br />
           <Link href="/#projects">
